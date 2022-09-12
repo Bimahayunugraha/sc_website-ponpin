@@ -1,0 +1,175 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f9f9f9;
+}
+
+.container {
+    @apply mx-auto px-5;
+}
+
+.sticky {
+    @apply fixed bg-white shadow bg-opacity-70 backdrop-blur-sm dark:bg-dark dark:bg-opacity-50;
+    box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.1);
+}
+.collapse.show {
+    @apply block;
+}
+.toggler-icon {
+    @apply block bg-gray-400 relative duration-300 dark:bg-white;
+    height: 2px;
+    width: 30px;
+    margin: 6px 0;
+}
+.active > .toggler-icon:nth-child(1) {
+    @apply transform rotate-45;
+    top: 7px;
+}
+.active > .toggler-icon:nth-child(2) {
+    @apply opacity-0;
+}
+.active > .toggler-icon:nth-child(3) {
+    top: -8px;
+    transform: rotate(135deg);
+}
+.page-scroll {
+    @apply block px-5 py-2 uppercase text-gray-400 duration-300;
+}
+.page-scroll.active{
+    @apply bg-sky-400 text-white dark:bg-slate-700 dark:text-white;
+}
+.section-heading {
+    @apply text-4xl text-gray-700 font-bold tracking-wide;
+}
+
+.icon {
+    @apply mb-4 text-blue-600;
+}
+
+.service-title {
+    @apply text-gray-800 font-semibold text-lg block mb-3 uppercase;
+}
+
+.feature-title {
+    @apply text-gray-800 font-medium block mb-3;
+}
+.team-item {
+    @apply m-3 text-center bg-white shadow duration-300;
+}
+.team-item:hover {
+    @apply shadow-lg;
+}
+.team-overlay {
+    @apply w-full h-full flex items-center justify-center absolute top-0 left-0 bg-gray-200 duration-300 opacity-0;
+}
+.team-overlay:hover {
+    @apply opacity-100;
+}
+
+.social-link {
+    @apply flex justify-center items-center w-10 h-10 bg-blue-600 rounded text-lg text-white duration-300;
+}
+.team-name {
+    @apply text-gray-800 font-bold uppercase text-lg my-2;
+}
+
+.client-logo {
+    @apply opacity-50 duration-300;
+}
+.client-logo:hover {
+    @apply opacity-100;
+}
+.tns-nav {
+    @apply absolute w-full bottom-0 -mb-16 text-center;
+}
+.tns-nav button {
+    @apply w-3 h-3 rounded-full bg-gray-800 dark:bg-white opacity-50 mx-1 my-6 duration-300;
+}
+.tns-nav > .tns-nav-active,
+.tns-nav button:hover {
+    @apply opacity-100;
+}
+.tns-nav button:focus {
+    @apply outline-none;
+}
+.pricing-box {
+    @apply m-3 text-center p-6 pb-10 shadow rounded duration-300;
+}
+.pricing-box:hover {
+    @apply shadow-lg bg-blue-100;
+}
+.package-name {
+    @apply text-blue-600 font-bold uppercase text-sm;
+}
+
+.footer-icon-2 {
+    @apply w-8 h-8 flex items-center justify-center bg-blue-600 dark:bg-gray-700 text-xs text-white rounded-full;
+}
+
+.footer-text {
+    @apply text-gray-600 dark:text-gray-100 duration-300;
+}
+
+.footer-links {
+    @apply leading-9 text-gray-600 dark:text-gray-100 duration-300;
+}
+.footer-links:hover {
+    @apply text-blue-500;
+}
+.footer-icon {
+    @apply flex justify-center items-center w-8 h-8 bg-white  rounded-full text-sm text-gray-700 duration-300;
+}
+.footer-icon:hover {
+    @apply text-white;
+}
+
+.sidebar-navlink.active{
+    @apply text-blue-700 bg-gray-200;
+}
+
+.navbar-fixed {
+    @apply fixed z-[9999] bg-neutral-100 bg-opacity-70;
+    backdrop-filter: blur(5px);
+    box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.1);
+}
+
+.nav-li.active {
+    @apply text-white bg-sky-400;
+}
+
+.hamburger-line {
+    @apply w-[30px] h-[2px] my-2 block bg-slate-900;
+}
+
+.hamburger-active > span:nth-child(1) {
+    @apply rotate-45;
+}
+
+.hamburger-active > span:nth-child(2) {
+    @apply scale-0;
+}
+
+.hamburger-active > span:nth-child(3) {
+    @apply -rotate-45;
+} 
+
+#dark-toggle:checked ~ label div.toggle-circle {
+    @apply translate-x-6 bg-gray-800;
+}
+
+.nav-settings {
+    @apply text-slate-400;
+}
+
+.nav-settings.active {
+    @apply border-t border-gray-700 dark:border-white md:-mt-px text-gray-700 dark:text-white;
+}
+
+.sticky-nav {
+    @apply fixed top-0;
+}
+
+
